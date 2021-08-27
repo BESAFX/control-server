@@ -1,0 +1,32 @@
+---
+# default properties that will be applied with all profiles.
+spring:
+  profiles:
+    active: dev
+  application:
+    name: control-server
+  security:
+    user:
+      name: cloud
+      password: cloud
+  jackson:
+    serialization:
+      indent_output: true
+---
+server:
+  port: 7000
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: password
+    key-store-type: pkcs12
+    key-alias: springboot
+    key-password: password
+# profile: dev
+spring:
+  profiles: dev
+logPath: ${HOME}/logs
+---
+# profile: prod
+spring:
+  profiles: prod
+logPath: ${HOME}/logs

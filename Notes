@@ -1,0 +1,7 @@
+https://www.thomasvitale.com/https-spring-boot-ssl-certificate/
+
+
+>> keytool -genkeypair -alias springboot -keyalg RSA -keysize 4096 -storetype PKCS12 -keystore keystore.p12 -validity 3650 -storepass password
+
+>> keytool -list -v -keystore keystore.p12
+
