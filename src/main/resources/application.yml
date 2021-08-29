@@ -13,20 +13,22 @@ spring:
     serialization:
       indent_output: true
 ---
+# profile: dev
+spring:
+  profiles: dev
+logPath: ${HOME}/logs
 server:
   port: 7000
+---
+# profile: prod
+spring:
+  profiles: prod
+logPath: ${HOME}/logs
+server:
+  port: 8443
   ssl:
     key-store: classpath:keystore.p12
     key-store-password: password
     key-store-type: pkcs12
     key-alias: springboot
     key-password: password
-# profile: dev
-spring:
-  profiles: dev
-logPath: ${HOME}/logs
----
-# profile: prod
-spring:
-  profiles: prod
-logPath: ${HOME}/logs
