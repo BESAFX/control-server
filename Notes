@@ -5,3 +5,4 @@ https://www.thomasvitale.com/https-spring-boot-ssl-certificate/
 
 >> keytool -list -v -keystore keystore.p12
 
+>> java -XX:+UseSerialGC -Xss512k -Xmx512M -Xms250M -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=prod -jar control-server.jar
